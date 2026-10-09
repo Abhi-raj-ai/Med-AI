@@ -1,10 +1,5 @@
-import Image from "next/image";
+import { redirect } from "next/navigation";
 
 export default function Home() {
-  return (
-    <main>
-      <h1>Med AI</h1>
-      <p>Private medical assistant app.</p>
-    </main>
-  )
+  redirect("/dashboard");
 }
