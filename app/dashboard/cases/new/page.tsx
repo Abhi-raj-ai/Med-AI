@@ -707,7 +707,704 @@ export default function NewCasePage() {
             </div>
           </section>
         ) : currentStep === 4 ? (
-          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8"></section>
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div>
+              <h2 className="text-xl font-semibold text-slate-900">
+                PERSONAL HISTORY
+              </h2>
+            </div>
+            {/* Addictions Section */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="addictions"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Addictions
+              </label>
+              <textarea
+                id="addictions"
+                name="addictions"
+                rows={4}
+                placeholder="List any known addictions, including substance abuse or behavioral dependencies."
+                className="min-h-32 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Accommodation Section */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Accommodation type
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="urban-house"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    id="urban-house"
+                    name="accommodationType"
+                    value="urban"
+                    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Urban house
+                </label>
+
+                <label
+                  htmlFor="rural-house"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    id="rural-house"
+                    name="accommodationType"
+                    value="rural"
+                    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Rural house
+                </label>
+              </div>
+            </div>
+
+            {/*Diet and Nutrition Section */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Diet and Nutrition
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="vegetarian"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    id="vegetarian"
+                    name="dietaryPreference"
+                    value="vegetarian"
+                    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Vegetarian
+                </label>
+
+                <label
+                  htmlFor="non-vegetarian"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    id="non-vegetarian"
+                    name="dietaryPreference"
+                    value="non-vegetarian"
+                    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Non-Vegetarian
+                </label>
+
+                <label
+                  htmlFor="mixed-diet"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="checkbox"
+                    id="mixed-diet"
+                    name="dietaryPreference"
+                    value="mixed-diet"
+                    className="h-4 w-4 rounded border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Mixed Diet
+                </label>
+              </div>
+
+              {/* Occupation */}
+              <div className="mt-6 flex flex-col gap-2">
+                <label
+                  htmlFor="occupation"
+                  className="text-sm font-semibold text-slate-700"
+                >
+                  Occupation
+                </label>
+                <input
+                  type="text"
+                  id="occupation"
+                  name="occupation"
+                  placeholder="Enter your occupation"
+                  className="rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+                />
+              </div>
+            </div>
+            {/* Marriage Status */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Marriage status
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="married"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="married"
+                    name="maritalStatus"
+                    value="married"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Married
+                </label>
+
+                <label
+                  htmlFor="unmarried"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="unmarried"
+                    name="maritalStatus"
+                    value="unmarried"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Unmarried
+                </label>
+              </div>
+            </div>
+
+            {/* Socio-economic Status */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Socio-economic status
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="economic-good"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="economic-good"
+                    name="economicStatus"
+                    value="good"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Good
+                </label>
+
+                <label
+                  htmlFor="occupation-relation-bad"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="occupation-relation-bad"
+                    name="occupationRelation"
+                    value="bad"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Bad
+                </label>
+              </div>
+            </div>
+
+            {/* Socio-economic Status */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Socio-economic status
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="economic-good"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="economic-good"
+                    name="economicStatus"
+                    value="good"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Good
+                </label>
+
+                <label
+                  htmlFor="economic-bad"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="economic-bad"
+                    name="economicStatus"
+                    value="bad"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Bad
+                </label>
+              </div>
+            </div>
+
+            {/* Relation with Family Members */}
+            <div className="mt-6 flex flex-col gap-2">
+              <span className="text-sm font-semibold text-slate-700">
+                Relation with family members
+              </span>
+
+              <div className="flex flex-wrap gap-4">
+                <label
+                  htmlFor="family-good"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="family-good"
+                    name="familyRelation"
+                    value="good"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Good
+                </label>
+
+                <label
+                  htmlFor="family-bad"
+                  className="flex cursor-pointer items-center gap-2 text-sm text-slate-700"
+                >
+                  <input
+                    type="radio"
+                    id="family-bad"
+                    name="familyRelation"
+                    value="bad"
+                    className="h-4 w-4 border-slate-300 text-blue-600 focus:ring-2 focus:ring-blue-100"
+                  />
+                  Bad
+                </label>
+              </div>
+            </div>
+
+            {/* Sexual History */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="sexual-history"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Sexual history
+              </label>
+              <textarea
+                id="sexual-history"
+                name="sexualHistory"
+                rows={4}
+                placeholder="Describe any relevant sexual history."
+                className="min-h-32 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Sterilisation / Contraception */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="contraception"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Sterilisation / Contraception
+              </label>
+              <textarea
+                id="contraception"
+                name="contraception"
+                rows={4}
+                placeholder="Mention any sterilisation or contraception methods used."
+                className="min-h-32 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Obstetrical History */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="obstetrical-history"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Obstetrical history
+              </label>
+              <textarea
+                id="obstetrical-history"
+                name="obstetricalHistory"
+                rows={4}
+                placeholder="Describe pregnancies, deliveries, and any complications."
+                className="min-h-32 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Regular Medicines */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="regular-medicines"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Medicine(s) taken regularly
+              </label>
+              <textarea
+                id="regular-medicines"
+                name="regularMedicines"
+                rows={4}
+                placeholder="List each medicine and how long it has been taken."
+                className="min-h-32 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+          </section>
+        ) : currentStep === 5 ? (
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div>
+              <h2 className="text-xl font-semibold text-slate-900">
+                PHYSICAL GENERALS
+              </h2>
+            </div>
+            {/* Appearance */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="appearance"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Appearance
+              </label>
+              <textarea
+                id="appearance"
+                name="appearance"
+                rows={2}
+                placeholder="Describe the patient's general appearance and any notable physical characteristics."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Appetite */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="appetite"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Appetite
+              </label>
+              <textarea
+                id="appetite"
+                name="appetite"
+                rows={2}
+                placeholder="Describe the patient's appetite and any changes in eating patterns."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Thirst */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="thirst"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Thirst
+              </label>
+              <textarea
+                id="thirst"
+                name="thirst"
+                rows={2}
+                placeholder="Describe the patient's thirst and any changes in fluid intake."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Desire */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="desire"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Desire
+              </label>
+              <textarea
+                id="desire"
+                name="desire"
+                rows={2}
+                placeholder="Describe the patient's desire."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Aversion */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="aversion"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Aversion
+              </label>
+              <textarea
+                id="aversion"
+                name="aversion"
+                rows={2}
+                placeholder="Describe the patient's aversion."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Intolerance */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="intolerance"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Intolerance
+              </label>
+              <textarea
+                id="intolerance"
+                name="intolerance"
+                rows={2}
+                placeholder="Describe the patient's intolerance."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Taste of Mouth */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="taste"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Taste of Mouth
+              </label>
+              <textarea
+                id="taste"
+                name="taste"
+                rows={2}
+                placeholder="Describe the patient's taste preferences."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Tongue */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="tongue"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Tongue
+              </label>
+              <textarea
+                id="tongue"
+                name="tongue"
+                rows={2}
+                placeholder="Describe the patient's tongue condition."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Stool */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="stool"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Stool
+              </label>
+              <textarea
+                id="stool"
+                name="stool"
+                rows={2}
+                placeholder="Describe the patient's stool condition."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Urine */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="urine"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Urine
+              </label>
+              <textarea
+                id="urine"
+                name="urine"
+                rows={2}
+                placeholder="Describe the patient's urine condition."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Pespiration */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="pespiration"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Pespiration
+              </label>
+              <textarea
+                id="pespiration"
+                name="pespiration"
+                rows={2}
+                placeholder="Describe the patient's pespiration."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Sleep and Dreams */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="sleep and dreams"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Sleep and Dreams
+              </label>
+              <textarea
+                id="sleep and dreams"
+                name="sleep and dreams"
+                rows={2}
+                placeholder="Describe the patient's sleep and dreams."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Thermal Reaction */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="thermal rx"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Thermal Reaction
+              </label>
+              <textarea
+                id="thermal rx"
+                name="thermal rx"
+                rows={2}
+                placeholder="Describe the patient's thermal reaction."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* Other's */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="other's "
+                className="text-sm font-semibold text-slate-700"
+              >
+                Others
+              </label>
+              <textarea
+                id="other's"
+                name="other's"
+                rows={2}
+                placeholder="Describe the patient's thermal reaction."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+          </section>
+        ) : currentStep === 6 ? (
+          <section className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <div>
+              <h2 className="text-xl font-semibold text-slate-900">
+                MENTAL GENERALS
+              </h2>
+            </div>
+
+            {/* ANXIETY */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="anxiety"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Anxiety
+              </label>
+              <textarea
+                id="anxiety"
+                name="anxiety"
+                rows={2}
+                placeholder="Describe the patient's anxiety."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* FEAR */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="fear"
+                className="text-sm font-semibold text-slate-700"
+              >
+                FEAR
+              </label>
+              <textarea
+                id="fear"
+                name="fear"
+                rows={2}
+                placeholder="Describe about the patient's fear."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* ANGER */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="anger"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Anger
+              </label>
+              <textarea
+                id="anger"
+                name="anger"
+                rows={2}
+                placeholder="Describe about the patient's anger."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* MEMORY */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="memory"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Memory
+              </label>
+              <textarea
+                id="memory"
+                name="memory"
+                rows={2}
+                placeholder="Describe about the patient's memory."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* COMPANY */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="company"
+                className="text-sm font-semibold text-slate-700"
+              >
+                company
+              </label>
+              <textarea
+                id="company"
+                name="company"
+                rows={2}
+                placeholder="Describe is patient's wants company of people or not."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+
+            {/* OTHER */}
+            <div className="mt-6 flex flex-col gap-2">
+              <label
+                htmlFor="other"
+                className="text-sm font-semibold text-slate-700"
+              >
+                Other
+              </label>
+              <textarea
+                id="other"
+                name="other"
+                rows={2}
+                placeholder="Describe is patient's other mental symptoms here."
+                className="min-h-16 w-full resize-y rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
+              />
+            </div>
+          </section>
         ) : null}
 
         <div className="mt-8 flex justify-between border-t border-slate-100 pt-6">
@@ -723,7 +1420,7 @@ export default function NewCasePage() {
             <div />
           )}
 
-          {currentStep < 5 && (
+          {currentStep < 6 && (
             <button
               type="button"
               onClick={() => setCurrentStep(currentStep + 1)}
